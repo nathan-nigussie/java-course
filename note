@@ -1,4 +1,4 @@
-to accept user input in Java
+To accept user input in Java
 - import java.util.Scanner;
 - nextLine()  reads the input from user
 //The following code is about using scanner
@@ -82,6 +82,186 @@ public class Main {
         scanner.close();
     }
 }
-------------------------------
-----Generating random numbers
-------------------------------
+----------------------------------------------------------------
+----Generating random numbers,boolean and Double numbers
+----------------------------------------------------------------
+import java.util.Random;
+
+//generating random numbers from negative 2 billion to plus 2 billion
+public class Main {
+    public static void main(String[] args) {
+
+        Random random = new Random();
+        //generating random integer value
+        int x = random.nextInt();
+        System.out.println(x);
+        //generating random double value
+        Double y = random.nextDouble();
+        System.out.println(y);
+        //generating random boolean value
+        boolean z = random.nextBoolean();
+        System.out.println(z);
+
+
+    }
+}
+
+----------------------------------------------------------------
+----Switch case statements
+----------------------------------------------------------------
+public class Main {
+    public static void main(String[] args) {
+
+       //switch statement in Java:it is statement that allows a variable to be tested for equality against list of values
+        String day="Friday";
+
+        switch(day){
+            case "Monday":System.out.println("It is Monday");
+            break;
+            case "Tuesday":System.out.println("It is Tuesday");
+                break;
+            case "Wednesday":System.out.println("It is Wednesday");
+                break;
+
+                // default test if the case is not in the lists of comparison
+                default:System.out.println("It is not day or not available");
+
+
+
+        }
+
+    }
+}
+
+
+----------------------------------------------------------------
+----While loop.
+----------------------------------------------------------------
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+       //while loop=executes a block of code as long as its condition remains true.
+        //here until the user enters his name the code keep asking name input.
+      Scanner scanner =new Scanner(System.in);
+      String name="";
+      while(name.isBlank()){
+          System.out.print("Enter Your name:");
+          name=scanner.nextLine();
+                  }
+System.out.println("Hello" + name);
+    }
+}
+
+----------------------------------------------------------------
+----DO loop another form of while loop but it check for the while loop only once
+----------------------------------------------------------------
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+       //DO loop=executes a block of code as long as its condition remains true.
+        //here until the user enters his name the code keep asking name input.
+      Scanner scanner =new Scanner(System.in);
+      String name="";
+      do{
+          System.out.print("Enter Your name:");
+          name=scanner.nextLine();
+      }while(name.isBlank());
+System.out.println("Hello" + name);
+    }
+}
+
+
+----------------------------------------------------------------
+----For Loop-------------
+----------------------------------------------------------------
+
+public class Main {
+    public static void main(String[] args) {
+//for loop=executes a block of code a limited amount of times
+
+//common for loop for counting numbers from 1-10
+        for (int i = 0; i <= 5; i++) {
+            System.out.println(i);
+        }
+        System.out.println("..................");
+        //common for loop for counting numbers from 1-10
+        //(i-=2) this decrement by two
+        for (int i = 10; i >= 0; i -= 2) {
+            System.out.println(i);
+
+        }
+        System.out.println("..................");
+        System.out.println("Happy New Year");
+    }
+}
+
+----------------------------------------------------------------
+----Nested Loop-------------
+----------------------------------------------------------------
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        //Nested loops= a loop inside a loop
+
+        Scanner scanner=new Scanner(System.in);
+        int rows;
+        int columns;
+        String symbol ="";
+        System.out.println("Enter Number of rows: ");
+        rows =scanner.nextInt();
+        System.out.println("Enter Number of columns: ");
+        columns=scanner.nextInt();
+        System.out.println("Enter Number of Symbol to use: ");
+        symbol=scanner.next();
+        for (int i=1;i<=rows;i++){
+            System.out.println();
+            for(int j=1;j<=columns;j++){
+                System.out.print(symbol);
+            }
+        }
+    }
+}
+OUTPUT:using symbol &.
+&&&&&&
+&&&&&&
+&&&&&&
+&&&&&&
+&&&&&&
+
+----------------------------------------------------------------
+----Array-------------
+----------------------------------------------------------------
+
+public class Main {
+    public static void main(String[] args) {
+
+        //Array=used to store multiple values in a single variable
+        // we can define the content of the array as String or int ot as what we want
+
+        String[] cars ={"Camaro","Honda","Tesla"};
+        //integer containing array
+        int[] num ={1,2,3,4};
+        System.out.println(cars[0]);
+        System.out.println(num[1]);
+        System.out.println("----------------");
+//another way of assigning array first by defining the array and the number of elements it contains
+        // String[] Electronics=new String[3] implies array name Electronics and number of element is 3.
+        String[] Electronics=new String[3];
+        Electronics[0]="Laptop";
+        Electronics[1]="Iphone";
+        Electronics[2]="DELL";
+
+//if we want to loop through elements of electronics
+        for (int i=0;i<=2;i++){
+            System.out.println(Electronics[i]);
+        }
+        }
+    }
+
