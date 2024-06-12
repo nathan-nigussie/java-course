@@ -265,3 +265,45 @@ public class Main {
         }
     }
 
+
+----------------------------------------------------------------
+----Working with Strings-------------
+----------------------------------------------------------------
+
+public class Main {
+    public static void main(String[] args) {
+//String= a reference data type that can store one or more characters
+        // reference data types have access to useful methods
+        String name ="Nathan";
+
+        //names.equals methods check if the string is identical. if only want to it to ignore teh case sensetiviness ,
+        // we use name.equals.ignoreCase method
+        boolean result =name.equals("nathan");
+        boolean result2 =name.equalsIgnoreCase("nathan");
+        //checking characters position
+        char result3=name.charAt(0);//character in index at 0
+        //checking index of a charcter indexOf
+        int result4=name.indexOf("n");
+                System.out.println(result);//out put is false
+        System.out.println(result2);//out put is true
+ System.out.println(result3);//out put is N
+        System.out.println(result4);//out put is 5
+        //checking if a character or string is empty isEmpty method
+        boolean result5=name.isEmpty(); //out put is boolean false
+        System.out.println(result4);//out put is 5
+        //change to uppercase and lower case.
+        String result6=name.toUpperCase();//to lower case works teh same way.
+        System.out.println(result6);//out put is NATHAN
+        //trim method also removes empty space
+        String name2= "   ABEBE ";
+        String result7=name2.trim();
+        System.out.println(result7);//removes empty space before and after the mark
+//replace option replace specific characters
+
+        String result8=name2.replace('A','a');
+        System.out.println(result8);//out put aBEBE
+
+
+    }
+
+}
