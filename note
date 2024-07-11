@@ -551,5 +551,35 @@ public class Main {
 }
 
 
+----------------------------------------------------------------
+----Creating class in java
+----------------------------------------------------------------
+public class Human {
+    String name;
+    int age;
+    double weight;
+Human(String name,int age,double weight)
+    {
+        this.name=name;
+        this.age=age;
+        this.weight=weight;
+    }
+}
+----------------------------------------------------------------
+----Instantiating class in java
+----------------------------------------------------------------
+public class Main 
+{
+    public static void main(String[] args) 
+    {
+        Human human1=new Human("abebe",26,45);
+        Human human2=new Human("Nate",76,145);
+        System.out.println(human1.name);//out-put:abebe;
+        System.out.println(human2.name+ " your age is "+human2.age);//out-put:Nate your age is 76
+    }
+
+}
+
+
 
 
