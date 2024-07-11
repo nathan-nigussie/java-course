@@ -400,4 +400,156 @@ public class Main {
 +    }
 +
 +}
-+
++------------------------------------------------------------
++----Working 2D arrays------------
++------------------------------------------------------------
++import java.util.*;
+
+//import  java.util.*; for creating 2D ArrayList.
+//2D ArrayList= a dynamic list of lists
+//we can change the size of these list during run time.
+
+public class Main {
+    public static void main(String[] args) {
+        //creating a string wrapper
+        ArrayList<String> bakeryList=new ArrayList();
+        bakeryList.add("pasta");
+        bakeryList.add("garlic bread");
+        bakeryList.add("donuts");
+
+    System.out.println(bakeryList);//output [pasta, garlic bread, donuts]
+        //getting the first element of the array
+        System.out.println(bakeryList.get(0));//output pasta
+    }
+
+    }
++------------------------------------------------------------
++----Working 2D arraysList------------
++------------------------------------------------------------
+import java.util.*;
+
+//import  java.util.*; for creating 2D ArrayList.
+//2D ArrayList= a dynamic list of lists
+//we can change the size of these list during run time.
+// it is a container of arraylists
+public class Main {
+    public static void main(String[] args) {
+        //creating a string wrapper
+        ArrayList<String> bakeryList=new ArrayList();
+        bakeryList.add("pasta");
+        bakeryList.add("garlic bread");
+        bakeryList.add("donuts");
+
+        ArrayList<String> drinkList=new ArrayList();
+        drinkList.add("Coca Cola");
+        drinkList.add("Smoothie");
+        drinkList.add("Whisky");
+        ArrayList<String> produceList=new ArrayList();
+        produceList.add("tomato");
+        produceList.add("potato");
+
+    System.out.println(bakeryList);//output [pasta, garlic bread, donuts]
+        //getting the first element of the array
+        System.out.println(bakeryList.get(0));//output pasta
+    }
++------------------------------------------------------------
++----Working  methods------------
++------------------------------------------------------------
+public class Main {
+    public static void main(String[] args) {
+
+      //method= a block of code that is executed whenever it is called upon
+       String name="bro";
+       int age=21;
+       hello(name,age);
+
+    }
+    //since we want to call the add method in static main method we have to include static and data type int in add method.
+static void hello(String name,int age){
+        System.out.println("hello"+name);
+        System.out.println("You are" +age);
+}
+    }
++------------------------------------------------------------
++----overload methods------------
++------------------------------------------------------------
+
+public class Main {
+    public static void main(String[] args) {
+
+        //overload methods= methods that share same name but have different parameters
+        //                method name + parameters =method signature
+
+        int x = add(1, 2, 3);
+        System.out.println(x);
+    }
+    static int add(int a ,int b){
+        System.out.println("This is overloaded method #1");
+        return a + b;
+    }
+    static int add(int a ,int b,int c){
+        System.out.println("This is overloaded method #2");
+        return a + b + c;
+    }
+    static int add(int a ,int b,int c,int d){
+        System.out.println("This is overloaded method #3");
+        return a + b + c +d;
+    }
+
+    }
++------------------------------------------------------------
++----!for-each loop in Java------------
++------------------------------------------------------------
+
+import java.util.ArrayList;
+
+//import  java.util.ArrayList; for using for each loop ,creating 2D ArrayList.
+//for-each =traversing technique to iterate through the elements in an array/collection
+           //it requires less-steps & it is more readable;
+public class Main {
+    public static void main(String[] args) {
+
+      //let us create array
+
+      String [] animals={"cat","dog","lion","gorilla"};
+
+      //for each
+        for(String i : animals){ // the colon(:) represent the word in
+            System.out.println(i); //cat,dog,lion, gorilla
+        }
+
+// or we can also create arrayList and the out-put is quite similar
+ArrayList<String> cars=new ArrayList<String>();
+        cars.add("Audi");
+        cars.add("BMW");
+        cars.add("KIA");
+        cars.add("Toyota");
+        for(String i : cars){ // the colon(:) represent the word in
+            System.out.println(i); //Audi,BMW,KIA,Toyota
+        }
+
+    }
+
+    }
++------------------------------------------------------------
++----!final in Java------------
++------------------------------------------------------------
+public class Main {
+    public static void main(String[] args) {
+
+        double y=3.14159;
+
+        //here we updated the value of y to 4
+        y=4;
+        final double pi=3.14159;
+        //here we cant re-assign the value of final pi
+
+        System.out.println(y);
+        System.out.println(pi);//java: cannot assign a value to final variable pi
+
+    }
+}
+
+
+
+
