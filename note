@@ -307,3 +307,97 @@ public class Main {
     }
 
 }
+
+
++----------------------------------------------------------------
++----//two dimension array:allocating two dimensional array memory with
++ String[][] cars = new String[3][3];
++----------------------------------------------------------------
++
++public class Main {
++    public static void main(String[] args) {
++
++        //2D array =an array of arrays
++
++        String[][] cars = new String[3][3];
++        cars[0][0] = "Camaro";
++        cars[0][1] = "Pajaro";
++        cars[0][2] = "Numero";
++        cars[1][0] = "Tesla";
++        cars[1][1] = "Hilux";
++        cars[1][2] = "XC40";
++        cars[2][0] = "KIA";
++        cars[2][1] = "Skoda";
++        cars[2][2] = "Hyundai";
++        for (int i = 0; i < cars.length; i++) {
++            //moving our cursor to new line with "System.out.println();"
++            System.out.println();
++            for (int j = 0; j < cars[i].length; j++) {
++                System.out.print(cars[i][j]+ " ");
++            }
++        }
++
++        }}
++----------------------------------------------------------------
++----Another way of creating two dimension array------------
++------------------------------------------------------------
++//2D array =an array of arrays by assigning the two D array elements when we declare it
++
++public class Main {
++    public static void main(String[] args) {
++
++        //2D array =an array of arrays by assigning the two D array elements when we declare it
++
++        String[][] cars = {{"Camaro","Pajaro","Numero"}, { "Camaro","Pajaro","Numero"},
++        { "Tesla","Hilux","XC40"},{"KIA","Skoda","Hyundai"}};
++
++        for (int i = 0; i < cars.length; i++) {
++            //moving our cursor to new line with "System.out.println();"
++            System.out.println();
++            for (int j = 0; j < cars[i].length; j++) {
++                System.out.print(cars[i][j]+ " ");
++            }
++        }
++
++        }}
++
++------------------------------------------------------------
++----Working with string methods------------
++------------------------------------------------------------
++public class Main {
++    public static void main(String[] args) {
++//String= a reference data type that can store one or more characters
++        // reference data types have access to useful methods
++        String name ="Nathan";
++        //names.equals methods check if the string is identical. if only want to ignore teh case sensetiviness ,
++        // we use name.equals.ignoreCase method
++        boolean result =name.equals("nathan");
++        boolean result2 =name.equalsIgnoreCase("nathan");
++        //checking characters position
++        char result3=name.charAt(0);//character in index at 0
++        //checking index of a charcter indexOf
++        int result4=name.indexOf("n");
++                System.out.println(result);//out put is false
++        System.out.println(result2);//out put is true
++        System.out.println(result3);//out put is N
++        System.out.println(result4);//out put is 5
++        //checking if a character or string is empty isEmpty method
++        boolean result5=name.isEmpty(); //out put is boolean false
++        System.out.println(result4);//out put is 5
++        //change to uppercase and lower case.
++        String result6=name.toUpperCase();//to lower case works teh same way.
++        System.out.println(result6);//out put is NATHAN
++        //trim method also removes empty space
++        String name2= "   ABEBE ";
++        String result7=name2.trim();
++        System.out.println(result7);//removes empty space before and after the mark
++//replace option replace specific characters
++
++        String result8=name2.replace('A','a');
++        System.out.println(result8);//out put aBEBE
++
++
++    }
++
++}
++
