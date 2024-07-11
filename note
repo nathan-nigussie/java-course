@@ -552,7 +552,7 @@ public class Main {
 
 
 ----------------------------------------------------------------
-----Creating class in java
+----Creating class in java and constructors
 ----------------------------------------------------------------
 public class Human {
     String name;
@@ -564,9 +564,15 @@ Human(String name,int age,double weight)
         this.age=age;
         this.weight=weight;
     }
+ void eat(){
+      System.out.println  (this.name + " is eating");
+    }
+    void drink(){
+        System.out.println  (this.name + " is drinking");
+    }
 }
 ----------------------------------------------------------------
-----Instantiating class in java
+----Instantiating class in java 
 ----------------------------------------------------------------
 public class Main 
 {
@@ -576,6 +582,8 @@ public class Main
         Human human2=new Human("Nate",76,145);
         System.out.println(human1.name);//out-put:abebe;
         System.out.println(human2.name+ " your age is "+human2.age);//out-put:Nate your age is 76
+human1.drink();//abebe is drinking
+human2.eat();//Nate is eating
     }
 
 }
