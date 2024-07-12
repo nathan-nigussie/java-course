@@ -667,3 +667,44 @@ System.out.println(refrigerator[0].name);
 
     }
 
+----------------------------------------------------------------
+----------------Passing objects as a parameter................
+----------------------------------------------------------------
+//main class
+
+public class Main {
+    public static void main(String[] args) {
+//Passing objects as parameter
+
+        Garage garage=new Garage();
+        Auto auto1=new Auto("BMW");
+        Auto auto2=new Auto("Pajaro");
+        Auto auto3=new Auto("Mercedes");
+
+garage.Park(auto1);
+        garage.Park(auto2);
+        garage.Park(auto3);
+
+
+    }
+
+    }
+//Garage class
+public class Garage {
+    //passing auto object
+    void Park(Auto auto){
+        System.out.println("The " +auto.name+" is parked");
+    }
+}
+//Auto class
+public class Auto {
+    String name;
+    Auto(String name){
+        this.name=name;
+
+    }
+}
+
+
+
+
