@@ -587,7 +587,54 @@ human2.eat();//Nate is eating
     }
 
 }
+----------------------------------------------------------------
+-----------------Global and Local Variable................
+----------------------------------------------------------------
 
+...................//local Variable.....................
 
+import java.util.Random; //creates random numbers
+public class DiceRoller {
+DiceRoller (){
+Random   random=new Random();
+int number=0;
+roll(random,number);
 
+        }
+//passing random and number to method roll makes them accessible in Dice roller method.
+//otherwise they are inaccessible
+void roll(Random random,int number){
+number=random.nextInt(6)+1;
+System.out.println(number);
+}
+}
+
+public class Main {
+public static void main(String[] args) {
+
+        //local variable=declared inside a method & visible only to that method
+        //global=declared outside a method, but within a class. visible to all parts of the class
+DiceRoller diceRoller=new DiceRoller();
+}
+
+    }
+
+...................//Global Variable.....................
+import java.util.Random; //creates random numbers
+public class DiceRoller {
+//this way random and number will be available in the DiceRoller class.
+Random random;
+int number;
+DiceRoller (){
+Random   random=new Random();
+
+roll();
+
+        }
+//passing random and number to method roll makes them accessible in Dice roller method.
+//otherwise they are inaccessible
+void roll(){
+number=random.nextInt(6)+1;
+System.out.println(number);
+}
 
