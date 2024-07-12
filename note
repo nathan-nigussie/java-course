@@ -719,7 +719,7 @@ public class Main {
         Friend friend3=new Friend("Jhon");
         System.out.println(Friend.numberOfFriends);
         //if we remove the static keyword from number of friends variable we cant access number of friends
-
+Friend.displayFriends();
     }
 
     }
@@ -733,6 +733,9 @@ public class Friend {
     Friend(String name){
         this.name=name;
         numberOfFriends++;
+    }
+ static void displayFriends(){
+        System.out.println("You have"+numberOfFriends+"friends");
     }
 
 }
