@@ -692,6 +692,7 @@ garage.Park(auto1);
 //Garage class
 public class Garage {
     //passing auto object
+    //here object data type should be passed
     void Park(Auto auto){
         System.out.println("The " +auto.name+" is parked");
     }
