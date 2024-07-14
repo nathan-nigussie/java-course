@@ -1121,15 +1121,16 @@ polymorphism=greek word for poly="many",Morph-"form.it is the ability of an obje
       //  Dynamic=after compilation (during run time)
         //e.g. A Octavia is Škoda,and a car and vehicle and an object
         Animal animal;//we are creating animal object, but we don't yet what type of animal is .
-//prompt user to input type of animal. we need scanner
+       //prompt user to input type of animal. we need scanner
 
 //Main Class
 
 import java.util.Scanner;
 
-public class Main {
-  public static void main(String[] args) {
-
+public class Main
+{
+  public static void main(String[] args) 
+  {
     Scanner scanner = new Scanner(System.in);
     System.out.println("what animal do you want ");
     System.out.println("(1=Dog) or (2=Cat) ");
@@ -1152,25 +1153,29 @@ public class Main {
 
 //Dog class
 
-public class Dog extends Animal {
+public class Dog extends Animal
+{
   @Override //good practice
-  void speak() {
+  void speak()
+  {
     System.out.println("The Dog goes bark");
     // super.speak("Dog speaks");
   }
 }
 
 //Cat Class
-public class Cat extends Animal {
+public class Cat extends Animal
+{
   @Override
-  public void speak() {
+  public void speak() 
+  {
     System.out.println("Cat goes Meow");
   }
 }
 //Animal Class
 
-public class Animal {
-
+public class Animal 
+{
   void speak() {
     System.out.println("The animal *brrr*");
   }
