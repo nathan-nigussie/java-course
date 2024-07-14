@@ -1,6 +1,7 @@
 # To accept user input in Java
 - import java.util.Scanner;
 - nextLine()  reads the input from user
+- 
 //The following code is about using scanner
 
 import java.util.Scanner;
@@ -997,39 +998,51 @@ public class Main {
     }
 
     }
-    //Fish Class
+//Fish Class
 
-    //we apply two interfaces for fish. let us say fish can be predators and Prey
+//we apply two interfaces for fish. let us say fish can be predators and Prey
+
 public class Fish implements Prey,Predator {
   @Override
-    public void hunt(){
-System.out.println("This fish is hunting smaller fishes");
-  }
-    @Override
-    public void flee(){
+    public void hunt()
+    {
+     System.out.println("This fish is hunting smaller fishes");
+    }
+ @Override
+    
+    public void flee()
+    {
         System.out.println("This fish is fleeing from bigger fishes");
     }
 }
-//Rabbit Class
-public class Rabbit implements Prey {
+// Rabbit Class
+
+public class Rabbit implements Prey 
+{
     @Override
-   public void flee(){
+   public void flee()
+    {
         System.out.println("This rabbit is fleeing");
     };
 }
 //Lion Class
-public class Lion {
-    public void hunt(){
+
+public class Lion
+{
+    public void hunt()
+    {
         System.out.println("The lion is hunting");
     }
 }
 
-//Prey Interface
-public interface Prey {
+// Prey Interface
+public interface Prey 
+{
     void flee();
 }
 //Predator Interface
-public interface Predator {
+public interface Predator
+{
     void hunt();
 }
 
