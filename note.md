@@ -1184,6 +1184,7 @@ public class Animal
   }
 }
 
+## Exceptions
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -1215,7 +1216,10 @@ public class Main {
     }
 
 
+#FILE
 
+
+![Untitled](https://github.com/user-attachments/assets/bf7e51b4-def9-4a4d-886b-7aebfb73d022)
 
 
 
