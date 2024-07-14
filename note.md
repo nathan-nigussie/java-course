@@ -37,16 +37,7 @@ System.out.println("hello" + name);
 //
 
 
-
-
-
-
-
-
-
-
-
--------------USER INPUT--------------------
+#-------------USER INPUT--------------------
 import javax.swing.JOptionPane;
    String name = JOptionPane.showInputDialog("Enter Your Name");
         JOptionPane.showMessageDialog(null, "hello" + name);
@@ -56,9 +47,9 @@ import javax.swing.JOptionPane;
         //if we want to parse a double value
         double height = Double.parseDouble(JOptionPane.showInputDialog("Enter Your Height"));
         JOptionPane.showMessageDialog(null, "You are " + height + "CM");
-..........///..............
-Maths
------------------
+        
+#.........MATHS....
+
 import java.util.Scanner;
 
 public class Main {
@@ -83,7 +74,7 @@ public class Main {
     }
 }
 ----------------------------------------------------------------
-----Generating random numbers,boolean and Double numbers
+----Generating random numbers, boolean and Double numbers
 ----------------------------------------------------------------
 import java.util.Random;
 
@@ -106,13 +97,12 @@ public class Main {
     }
 }
 
-----------------------------------------------------------------
-----Switch case statements
-----------------------------------------------------------------
+----------------Switch case statements------------------------------------------------
+
 public class Main {
     public static void main(String[] args) {
 
-       //switch statement in Java:it is statement that allows a variable to be tested for equality against list of values
+       //switch statement in Java:it is statement that allows a variable to be tested for equality against a list of values
         String day="Friday";
 
         switch(day){
@@ -134,9 +124,7 @@ public class Main {
 }
 
 
-----------------------------------------------------------------
-----While loop.
-----------------------------------------------------------------
+#------------....--------While loop--------------------------------------------
 
 import java.util.Scanner;
 
@@ -144,7 +132,7 @@ public class Main {
     public static void main(String[] args) {
 
        //while loop=executes a block of code as long as its condition remains true.
-        //here until the user enters his name the code keep asking name input.
+        //here until the user enters his name the code keeps asking name input.
       Scanner scanner =new Scanner(System.in);
       String name="";
       while(name.isBlank()){
@@ -155,16 +143,17 @@ System.out.println("Hello" + name);
     }
 }
 
-----------------------------------------------------------------
-----DO loop another form of while loop but it check for the while loop only once
-----------------------------------------------------------------
+" -------------------DO loop---------------------------------------------
+
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-       //DO loop=executes a block of code as long as its condition remains true.
-        //here until the user enters his name the code keep asking name input.
+       //DO loop=executes a block of codes as long as its condition remains true.
+       //It is  another form of while loop but it checks for the while loop only once
+        //here until the user enters his name the code keeps asking for name input.
       Scanner scanner =new Scanner(System.in);
       String name="";
       do{
@@ -176,14 +165,11 @@ System.out.println("Hello" + name);
 }
 
 
-----------------------------------------------------------------
-----For Loop-------------
-----------------------------------------------------------------
+# ----------------------For Loop-------------------------------------------
 
 public class Main {
     public static void main(String[] args) {
 //for loop=executes a block of code a limited amount of times
-
 //common for loop for counting numbers from 1-10
         for (int i = 0; i <= 5; i++) {
             System.out.println(i);
@@ -200,9 +186,8 @@ public class Main {
     }
 }
 
-----------------------------------------------------------------
-----Nested Loop-------------
-----------------------------------------------------------------
+# ----------------------Nested Loop------------------------------------------
+
 import java.util.Scanner;
 
 public class Main {
@@ -235,15 +220,13 @@ OUTPUT:using symbol &.
 &&&&&&
 &&&&&&
 
-----------------------------------------------------------------
-----Array-------------
-----------------------------------------------------------------
+# ----------------------Array-----------------------------------------
 
 public class Main {
     public static void main(String[] args) {
 
         //Array=used to store multiple values in a single variable
-        // we can define the content of the array as String or int ot as what we want
+        //We can define the content of the array as String or int as what we want
 
         String[] cars ={"Camaro","Honda","Tesla"};
         //integer containing array
@@ -251,7 +234,7 @@ public class Main {
         System.out.println(cars[0]);
         System.out.println(num[1]);
         System.out.println("----------------");
-//another way of assigning array first by defining the array and the number of elements it contains
+      //another way of assigning array first by defining the array and the number of elements it contains
         // String[] Electronics=new String[3] implies array name Electronics and number of element is 3.
         String[] Electronics=new String[3];
         Electronics[0]="Laptop";
@@ -264,56 +247,51 @@ public class Main {
         }
         }
     }
-*** Working with Strings 
 
-----------------------------------------------------------------
-----Working with Strings-------------
-----------------------------------------------------------------
+# ------------------------Working with Strings----------------------------------------
 
 public class Main {
     public static void main(String[] args) {
-//String= a reference data type that can store one or more characters
-        // reference data types have access to useful methods
+    //String= a reference data type that can store one or more characters
+    // reference data types have access to useful methods
         String name ="Nathan";
 
-        //names.equals methods check if the string is identical. if only want to it to ignore teh case sensetiviness ,
-        // we use name.equals.ignoreCase method
+     //names.equals methods check if the string is identical. if only want  to ignore the case sensitiveness ,
+     //We use name.equals.ignoreCase method
         boolean result =name.equals("nathan");
         boolean result2 =name.equalsIgnoreCase("nathan");
-        //checking characters position
+     //checking characters position
         char result3=name.charAt(0);//character in index at 0
-        //checking index of a charcter indexOf
+     //checking index of a character indexOf
         int result4=name.indexOf("n");
                 System.out.println(result);//out put is false
-        System.out.println(result2);//out put is true
- System.out.println(result3);//out put is N
+         System.out.println(result2);//out put is true
+         System.out.println(result3);//out put is N
         System.out.println(result4);//out put is 5
-        //checking if a character or string is empty isEmpty method
+     //checking if a character or string is empty isEmpty method
         boolean result5=name.isEmpty(); //out put is boolean false
         System.out.println(result4);//out put is 5
-        //change to uppercase and lower case.
+     //change to uppercase and lowercase.
         String result6=name.toUpperCase();//to lower case works teh same way.
         System.out.println(result6);//out put is NATHAN
-        //trim method also removes empty space
+     //trim method also removes empty space
         String name2= "   ABEBE ";
         String result7=name2.trim();
         System.out.println(result7);//removes empty space before and after the mark
-//replace option replace specific characters
+     //replace option replace specific characters
 
         String result8=name2.replace('A','a');
         System.out.println(result8);//out put aBEBE
-
-
     }
 
 }
 
 
-+----------------------------------------------------------------
-+----//two dimension array:allocating two dimensional array memory with
-+ String[][] cars = new String[3][3];
-+----------------------------------------------------------------
-+
+# ---------------------Two dimension array-------------------------------------------
+
+String[][] cars = new String[3][3];//:allocating two dimensional array memory with
+
+
 +public class Main {
 +    public static void main(String[] args) {
 +
