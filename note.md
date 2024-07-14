@@ -1048,6 +1048,73 @@ public interface Predator
 }
 
 
+----------------------------------------------------------------
+----------------Polymorphism................
+----------------------------------------------------------------
+// Main Class
+
+import package2.C;
+
+public class Main {
+    public static void main(String[] args) {
+//polymorphism=greek word for poly="many",Morph-"form
+//it is the ability of an object to identify as more than one type
+
+Car car=new Car();
+Bicycle bicycle=new Bicycle();
+Boat boat=new Boat();
+
+//creating array of objects:because all identifies as Vehicle.
+     Vehicle  [] racers={car,boat,bicycle};
+     car.go();//The car is speeding
+        //or other way of writing go method
+
+        for(Vehicle x:racers){
+
+            x.go();//The car is speeding //The boat  is floating //The bicycle wheel is rotating
+        }
+    }
+
+    }
+// Vehicle Class
+public class Vehicle {
+
+public void go()
+ {
+
+ }
+}
+//Car Class
+
+public class Car extends Vehicle {
+@Override
+public void go()
+{
+    System.out.println("The car is speeding");
+}
+}
+
+//Boat Class
+
+    public class Car extends Vehicle {
+        @Override
+public void go(){
+    System.out.println("The car is speeding");
+}
+
+    }
+//Bicycle Class
+public class Bicycle extends Vehicle {
+    @Override
+    public void go(){
+        System.out.println("The bicycle wheel is rotating");
+    }
+
+}
+
+
+
+
 
 
 
