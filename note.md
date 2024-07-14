@@ -1029,7 +1029,7 @@ public class Rabbit implements Prey
 
 public class Lion
 {
-    public void hunt()
+ public void hunt()
     {
         System.out.println("The lion is hunting");
     }
@@ -1041,6 +1041,7 @@ public interface Prey
     void flee();
 }
 
+//Predator Interface
 public interface Predator
 {
     void hunt();
