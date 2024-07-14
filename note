@@ -882,4 +882,37 @@ public class Hero extends Person {
     }
 }
 
+----------------------------------------------------------------
+----------------ABSTRACT KEYWORD................
+----------------------------------------------------------------
+
+//Main class
+public class Main {
+    public static void main(String[] args) {
+//Abstract=Abstract classes cannot be instantiated,but they can have a subclass
+        //abstract methods are declared without implementations
+
+        Car car =new Car();
+       // Vehicle vehicle=new Vehicle();
+     car.go();
+    }
+
+    }
+//Vehicle Class
+
+public abstract class Vehicle {
+//abstract class prohibits  creating a class from a Generic class name.
+    abstract void go();
+}
+//Car Class
+    public class Car extends Vehicle {
+        @Override
+        void go() {
+            //creating implementation in child class from the abstract parent class
+            System.out.println("The driver is driving the car");
+        }
+    }
+
+
+
 
