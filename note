@@ -739,6 +739,40 @@ public class Friend {
     }
 
 }
+----------------------------------------------------------------
+----------------Inheritance................
+----------------------------------------------------------------
+//Maini class
+public class Main {
+    public static void main(String[] args) {
+//inheritance=the process where one class acquires, the attributes and methods of another class.
+Auto auto=new Auto("BMW");
+Bicycle bicycle=new Bicycle();
+auto.go();//this vehicle is moving
+        auto.stop();//this vehicle is Stopped
+       System.out.println(auto.doors);//4
+        System.out.println(bicycle.pedals);//2
+    }
+
+    }
+
+//Bicycle Class
+public class Bicycle extends Vehicle{
+    int wheels=2;
+    int pedals=2;
+}
+
+//Auto Class
+public class Auto extends Vehicle{
+    String name;
+    int doors=4;
+    int wheels=4;
+    Auto(String name){
+        this.name=name;
+
+    }
+}
+
 
 
 
