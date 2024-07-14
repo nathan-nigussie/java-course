@@ -773,6 +773,38 @@ public class Auto extends Vehicle{
     }
 }
 
+----------------------------------------------------------------
+----------------Method overriding................
+----------------------------------------------------------------
+//Main class
+
+public class Main {
+    public static void main(String[] args) {
+//Method overriding= Declaring a method in subclass,which is already present in parent class.
+        //done so that the child class can give its own implementation.
+        Animal animal=new Animal();
+Dog dog=new Dog();
+dog.speak();//The Dog goes bark
+animal.speak();//The animal Speaks
+
+    }
+
+    }
+//Animal Class
+public class Animal {
+    void speak(){
+        System.out.println("The animal Speaks");
+    }
+}
+//Dog class
+public class Dog extends Animal{
+    @Override //good practice
+    void speak() {
+        System.out.println("The Dog goes bark");
+       // super.speak("Dog speaks");
+    }
+}
+
 
 
 
