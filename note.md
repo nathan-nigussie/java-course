@@ -1040,7 +1040,7 @@ public interface Prey
 {
     void flee();
 }
-//Predator Interface
+
 public interface Predator
 {
     void hunt();
