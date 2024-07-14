@@ -805,7 +805,7 @@ public class Dog extends Animal{
     }
 }
 ----------------------------------------------------------------
-----------------SUPER KEY WORD................
+----------------1.OPTION1:SUPER KEY WORD................
 ----------------------------------------------------------------
 //Main class
 
@@ -838,6 +838,48 @@ public class Hero extends Person {
 
     }
 }
+----------------------------------------------------------------
+----------------2.OPTION2:SUPER KEY WORD................
+----------------------------------------------------------------
+//Main class
 
+public class Main {
+    public static void main(String[] args) {
+//super=keyword refers to superclass(parent) of an object very similar to the "this"keyword
+Hero hero1=new Hero("batman",42,"$$$$");
+        Hero hero2=new Hero("Nathan",36,"Hardwork");
+System.out.println(hero1.toString());
+        System.out.println(hero2.toString());
+    }
+
+    }
+
+//Person Class
+
+public class Person {
+    String name;
+    int age;
+    Person(String name,int age){
+        this.name=name;
+        this.age=age;
+    }
+    public String toString(){
+        return this.name + "\n"+this.age+"\n";
+    }
+}
+
+//Hero Class
+
+public class Hero extends Person {
+    String Power;
+    Hero(String name,int age,String Power) {
+        super(name, age);//super brings the age and name variable from parent class
+        this.Power = Power;
+    }
+        public String toString(){
+            return super.toString()+this.Power;
+
+    }
+}
 
 
