@@ -1,4 +1,4 @@
-To accept user input in Java
+## To accept user input in Java
 - import java.util.Scanner;
 - nextLine()  reads the input from user
 //The following code is about using scanner
