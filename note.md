@@ -1128,6 +1128,7 @@ polymorphism=greek word for poly="many",Morph-"form.it is the ability of an obje
 import java.util.Scanner;
 
 public class Main
+
 {
   public static void main(String[] args) 
   {
@@ -1164,6 +1165,7 @@ public class Dog extends Animal
 }
 
 //Cat Class
+
 public class Cat extends Animal
 {
   @Override
@@ -1172,6 +1174,7 @@ public class Cat extends Animal
     System.out.println("Cat goes Meow");
   }
 }
+
 //Animal Class
 
 public class Animal 
