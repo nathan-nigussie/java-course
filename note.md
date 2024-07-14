@@ -977,8 +977,63 @@ public class Main {
            this.model=model;
         }
 
+    }
+## Interface in Java
+//Main Class
+
+public class Main {
+    public static void main(String[] args) {
+//interfaces are template that can be applied to a class.
+        //similar to inheritance, but specifies what a class has/must do
+        //class can apply more than one interface, inheritance is limited to 1 superclass
+        Fish fish =new Fish();
+        Rabbit rabbit=new Rabbit();
+        rabbit.flee();//This rabbit is fleeing
+        Lion lion=new Lion();
+        lion.hunt();//The lion is hunting
+        //here fish is implementing more than one interface
+        fish.hunt();//This fish is hunting smaller fishes
+        fish.flee();//This fish is fleeing from bigger fishes
+    }
 
     }
+    //Fish Class
+
+    //we apply two interfaces for fish. let us say fish can be predators and Prey
+public class Fish implements Prey,Predator {
+  @Override
+    public void hunt(){
+System.out.println("This fish is hunting smaller fishes");
+  }
+    @Override
+    public void flee(){
+        System.out.println("This fish is fleeing from bigger fishes");
+    }
+}
+//Rabbit Class
+public class Rabbit implements Prey {
+    @Override
+   public void flee(){
+        System.out.println("This rabbit is fleeing");
+    };
+}
+//Lion Class
+public class Lion {
+    public void hunt(){
+        System.out.println("The lion is hunting");
+    }
+}
+
+//Prey Interface
+public interface Prey {
+    void flee();
+}
+//Predator Interface
+public interface Predator {
+    void hunt();
+}
+
+
 
 
 
