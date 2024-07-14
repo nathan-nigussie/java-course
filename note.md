@@ -1103,12 +1103,15 @@ polymorphism=greek word for poly="many",Morph-"form.it is the ability of an obje
             }
             
                 }
+                
 //Bicycle Class
-           public class Bicycle extends Vehicle {
-                   @Override
-                   public void go(){
-                   System.out.println("The bicycle wheel is rotating");
-            }
+
+        public class Bicycle extends Vehicle {
+        @Override
+        public void go()
+        {
+           System.out.println("The bicycle wheel is rotating");
+        }
             
 
 
