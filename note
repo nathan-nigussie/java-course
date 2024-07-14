@@ -912,7 +912,29 @@ public abstract class Vehicle {
             System.out.println("The driver is driving the car");
         }
     }
+----------------------------------------------------------------
+----------------Access Modifiers in Java................
+----------------------------------------------------------------
+package package2;
+import package1.*;
+public class C {
+    //Example of no access modifier "the String defaultMessage is with no access modifier".
+    //here defaultMessage is only available within the same package.
+    String defaultMessage="This is the default Message";
+    //public    String publicMessage will be available in another package
+   public String publicMessage=" This is the public Message";
 
+
+}
+package package1;
+import package2.*;
+public class A {
+    //protected access modifier= all methods and classes are available in different packages as long as
+    // the class extends to the parent class.
+    protected String protectedMessage=" This is protected Message";
+
+
+}
 
 
 
