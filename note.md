@@ -1055,10 +1055,10 @@ public interface Predator
 
 import package2.C;
 
+////polymorphism=greek word for poly="many",Morph-"form.it is the ability of an object to identify as more than one type
+
 public class Main {
     public static void main(String[] args) {
-//polymorphism=greek word for poly="many",Morph-"form
-//it is the ability of an object to identify as more than one type
 
 Car car=new Car();
 Bicycle bicycle=new Bicycle();
