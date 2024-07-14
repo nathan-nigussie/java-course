@@ -930,11 +930,77 @@ package package1;
 import package2.*;
 public class A {
     //protected access modifier= all methods and classes are available in different packages as long as
-    // the class extends to the parent class.
+    //The class extends to the parent class.
     protected String protectedMessage=" This is protected Message";
 
 
 }
+----------------------------------------------------------------
+----------------Encapsulation in Java................
+----------------------------------------------------------------
+//Main Class
+
+public class Main {
+    public static void main(String[] args) {
+//Encapsulation=attributes of a class will be hidden or private.
+        //can be accessed only through methods(getters and setters)
+        //you should make attributes private if you don't have a reason to make them public
+//Setters; allow changes attributes of private attributes
+        Car car =new Car("BMW","S30",2018);
+       // Vehicle vehicle=new Vehicle();
+
+        //setters
+        car.setYear(2025);
+   System.out.println(car.getMake());
+
+        System.out.println(car.getModel());
+
+        System.out.println(car.getYear());
+    }
+
+    }
+
+
+
+//CAR CLASS
+
+    public class Car  {
+       private String make;
+       private String model;
+       private int year;
+       Car(String make,String model,int year){
+          // this.make=make;
+          // this.model=model;
+          // this.year=year;
+           //if we would like to create setters the above code should be changed
+           this.setMake(make);
+           this.setYear(year);
+           this.setModel(model);
+
+       }
+       public String getMake(){
+           return make;
+       }
+       public String getModel(){
+           return model;
+       }
+       public int getYear(){
+           return year;
+       }
+
+       //Setters; changes attributes of private attributes if we would like to change
+        public void setMake(String make){
+           this.make=make;
+        }
+        public void setYear(int year){
+            this.year=year;
+        }
+        public void setModel(String model){
+           this.model=model;
+        }
+
+
+    }
 
 
 
